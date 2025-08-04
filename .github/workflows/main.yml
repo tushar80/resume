@@ -24,5 +24,3 @@ jobs:
           target: TusharPatil_resume.pdf
           credentials: ${{ secrets.GDRIVE_CREDENTIALS }}
           parent_folder_id: ${{ secrets.GDRIVE_FOLDER_ID }}
-          name: ${{ secrets.RESUME_FILENAME }}
-          overwrite: "true"
