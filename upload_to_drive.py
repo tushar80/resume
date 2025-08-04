@@ -33,7 +33,7 @@ def upload_to_drive():
     timestamp_file = [
         f
         for f in os.listdir(".")
-        if f.startswith(f"{basename}_") and f.endswith(".pdf") and "latest" not in f
+        if f.startswith(f"{basename}") and f.endswith(".pdf") and "latest" not in f
     ][0]
 
     file_metadata = {
