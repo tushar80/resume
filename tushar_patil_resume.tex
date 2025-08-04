@@ -1,0 +1,221 @@
+%-------------------------
+% Tushar Patil Resume in Latex
+% Author : Tushar Patil
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\large#3} & \textit{\large #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\large#1} & \textit{\large #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \large#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-2pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+\setlength{\footskip}{4.08003pt}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+\begin{center}
+    \textbf{\Huge \scshape Tushar Patil} \\ \vspace{1pt}
+    \large \href{tel:+919420955564}{\underline{+91 9420955564}} $|$ \href{mailto:patiltushar8084@gmail.com}{\underline{patiltushar8084@gmail.com}} $|$ 
+    \href{https://github.com/tushar80}{\underline{github.com/tushar80}}
+\end{center}
+
+
+%-----------Summary-----------
+\section{Summary}
+    \textbf{Full Stack Developer} with \textbf{3+ years} of experience in \textbf{Python}, \textbf{React}, \textbf{GO}, and \textbf{AWS}. Proven track record in building scalable web applications. Passionate about delivering efficient and maintainable code.
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \large{\item{
+     \textbf{Programming Languages}{: Python, JavaScript, C/C++, Go, SQL, TypeScript} \\
+     \textbf{Frameworks}{: Django, Flask, ReactJS, Node.js} \\
+     \textbf{Developer Tools}{: Linux, Amazon Web Services, Docker, Kubernetes, PostgreSQL} \\
+     \textbf{Libraries}{: HTMX, pandas, NumPy}
+    }}
+ \end{itemize}
+ 
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Engineer}{June 2022 -- Present}
+      {Persistent Systems Ltd}{Pune, MH}
+      \resumeItemListStart
+        \resumeItem{Collaborated effectively in an \textbf{agile development} environment, consistently meeting deadlines and milestones while ensuring high-quality deliverables.}
+        \resumeItem{Engaged directly with clients to discern and address feature requirements, fostering strong client relationships and delivering tailored solutions.}
+        \resumeItem{Developed CRUD \textbf{REST APIs} using \textbf{DjangoRestFramework} and \textbf{PostgreSQL} for persistent data storage.}
+        \resumeItem{Architected and implemented an \textbf{API authentication} module utilizing \textbf{OAuth}, ensuring secure access to application resources and protecting user data.}
+        \resumeItem{Achieved a \textbf{20\%} reduction in AWS costs through strategic \textbf{cost optimizations}, optimizing resource allocation and enhancing cost efficiency for the client.}
+        \resumeItem{Developed dynamic and responsive web applications using \textbf{React.js}, enhancing user experience with efficient and reusable components.}
+        \resumeItem{Utilized \textbf{Axios} for seamless API integrations, ensuring reliable data fetching and handling in various project modules.}
+        \resumeItem{Implemented robust state management solutions using \textbf{React hooks} and \textbf{context API} to maintain application state consistency.}
+        \resumeItem{Implemented a billing feature in application using \textbf{AWS CostExplorer} API, streamlining client's invoicing process and improved financial visibility.}
+        \resumeItem{Implemented fully customizable email and mobile notification service using \textbf{AWS SES} and \textbf{AWS SNS}.}
+        \resumeItem{Implemented file sharing functionality on the web application using \textbf{AWS SES}.}
+        \resumeItem{Collaborated closely with senior engineers to implement advanced file encryption using \textbf{AWS KMS}, enhancing data security and compliance measures.}
+        \resumeItem{Collaborated with cross-functional teams and clients to gather requirements, troubleshoot issues, and optimize application performance.}
+        \resumeItem{Engineered a seamless docx to PDF converter, enhancing user experience.}
+        \resumeItem{Managed the \textbf{Kubernetes infrastructure} for deploying and scaling the application, ensuring high availability and reliability.}
+        \resumeItem{Implemented \textbf{AWS CodePipeline} to streamline continuous delivery, automating the build, test, and deployment processes.}
+        \resumeItem{Maintained and updated documentation for various components and modules, facilitating better team collaboration and onboarding processes.}
+        \resumeItem{Wrote neat and clean \textbf{Unit Test cases}, ensuring robustness and reliability of the application.}
+      \resumeItemListEnd
+    
+    \resumeSubheading
+      {Software Engineer Intern}{Jan. 2022 -- June 2022}
+      {Persistent Systems Ltd}{Pune, MH}
+      \resumeItemListStart
+        \resumeItem{Collaborated with a team of 5 software engineers.}
+        \resumeItem{Collaborated closely with senior team members to understand project requirements and translate them into actionable development tasks.}
+        \resumeItem{Took ownership of small-scale projects or tasks, demonstrating initiative and accountability in project execution.}
+        \resumeItem{Engaged in comprehensive code reviews, debugging, and troubleshooting sessions, actively contributing to codebase improvements and ensuring adherence to best practices.}
+        \resumeItem{Acquired valuable hands-on experience with cutting-edge technologies including \textbf{Go}, \textbf{TypeScript}, and \textbf{Docker}, demonstrating adaptability and a willingness to learn new technologies.}
+    \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Personal Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Bookera} $|$ \emph{JavaScript, NodeJS, React, PostgreSQL}}{}
+          \resumeItemListStart
+            \resumeItem{Developed a full-stack web application using with NodeJS serving a REST API with React as the frontend.}
+            \resumeItem{Implemented features for writing book reviews and a rating system.}
+            \resumeItem{Designed the database schema, implemented REST API endpoints, and documented the APIs.}
+            \resumeItem{Integrated user authentication and authorization mechanisms using \textbf{JWT}.}
+            \resumeItem{Implemented a search functionality to find books based on various criteria.}
+            \resumeItem{Optimized frontend performance with React hooks and efficient state management.}
+            \resumeItem{Utilized Git for version control and tracking changes in the codebase.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Team Task Manager} $|$ \emph{Python, Django, HTML/CSS, Git}}{}
+          \resumeItemListStart
+            \resumeItem{Developed a web application for managing tasks among teams with progress tracking feature.}
+            \resumeItem{Published the app as django package on PyPI.}
+            \resumeItem{Designed and implemented a user-friendly interface with HTML and CSS.}
+            \resumeItem{Integrated email notifications for task updates and deadlines.}
+            \resumeItem{Implemented role-based access control for different user types (e.g., admin, member).}
+            \resumeItem{Utilized Git for version control and tracking changes in the codebase.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Sinhgad college of Engineering}{Solapur, MH}
+      {Bachelor of Technology in Computer Science}{Aug. 2018 -- May 2022}
+    \resumeSubheading
+      {MIT junior college}{Solapur, MH}
+      {HSC in Science}{Aug. 2016 -- May 2018}
+  \resumeSubHeadingListEnd
+
+
+%-----------Certifications-----------
+\section{Certifications}
+    \begin{itemize}
+        \item \textbf{AWS Certified Developer - Associate}
+    \end{itemize}
+
+
+%-----------KNOWN LANGUAGES-----------
+\section{Known Languages}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \large{\item{
+     \textbf{Human Languages}{: English, Marathi, Hindi, German} \\
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}
