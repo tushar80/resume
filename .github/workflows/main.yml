@@ -45,3 +45,11 @@ jobs:
           GOOGLE_FOLDER_ID: ${{ secrets.GOOGLE_FOLDER_ID }}
           BASENAME: ${{ env.TEX_BASENAME }}
         run: uv run --script upload_to_drive.py
+
+      - name: Archive PDF artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-pdf
+          path: |
+            *.pdf
+          retention-days: 30
