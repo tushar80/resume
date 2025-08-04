@@ -4,23 +4,43 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
-  build_and_upload:
+  compile-resume-and-upload:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Find LaTeX file
+        run: |
+          TEX_FILE=$(find . -name "*.tex" -type f | head -1)
+
+          if [ -z "$TEX_FILE" ]; then
+            echo "Error: No .tex file found in the repository"
+            exit 1
+          fi
+
+          echo "Found LaTeX file: $TEX_FILE"
+
+          BASENAME=$(basename "$TEX_FILE" .tex)
+          echo "Base name: $BASENAME"
+
+          echo "TEX_BASENAME=$BASENAME" >> $GITHUB_ENV
+          echo "TEX_FILE=$TEX_FILE" >> $GITHUB_ENV
+
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v4
         with:
-          root_file: TusharPatil_resume.tex
+          root_file: ${{ env.TEX_FILE }}
           compiler: pdflatex
 
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+
       - name: Upload to Google Drive
-        uses: willo32/google-drive-upload-action@v1
-        with:
-          target: TusharPatil_resume.pdf
-          credentials: ${{ secrets.GDRIVE_CREDENTIALS }}
-          parent_folder_id: ${{ secrets.GDRIVE_FOLDER_ID }}
+        env:
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+          GOOGLE_FOLDER_ID: ${{ secrets.GOOGLE_FOLDER_ID }}
+        run: uv run --script upload_to_drive.py
